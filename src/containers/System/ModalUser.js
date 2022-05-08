@@ -20,6 +20,7 @@ class ModalUser extends Component {
         this.listenToEmitter();
     }
 
+    // reset value empty
     listenToEmitter() {
         emitter.on('EVENT_CLEAR_MODAL_DATA', () => {
             this.setState({
