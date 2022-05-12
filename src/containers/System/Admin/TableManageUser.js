@@ -27,13 +27,11 @@ class TableManageUser extends Component {
         this.props.deleteAUserRedux(user.id);
     }
    
-    /* Life cycle
-    * Run component
-    * 1. Run construct -> init state
-    * 2. Did mount (set state) : born ; unmount
-    * 3. Render (re-render)
-    * 
-    */
+   
+    handleEditUser = (user) => {
+        this.props.handleEditUserFromParentKey(user)
+    }
+
     render() {
         console.log('hoidanit check all users: ', this.props.listUsers)
         console.log('hoidanit check state: ', this.state.usersRedux)
@@ -51,13 +49,14 @@ class TableManageUser extends Component {
                         {arrUsers && arrUsers.length > 0 &&
                         arrUsers.map((item, index) => {
                             return (
-                                <tr key ={index} >
+                            <tr key ={index} >
                             <td>{item.email}</td>
                             <td>{item.firstName}</td>
                             <td>{item.lastName}</td>
                             <td>{item.address}</td>
                             <td>
-                        <button 
+                        <button
+                        onClick={() => this.handleEditUser(item)} 
                             className='btn-edit'   
                         >
                             <i className="fas fa-pencil-alt"></i>
