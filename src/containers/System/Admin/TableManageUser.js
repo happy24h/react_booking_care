@@ -33,8 +33,8 @@ class TableManageUser extends Component {
     }
 
     render() {
-        console.log('hoidanit check all users: ', this.props.listUsers)
-        console.log('hoidanit check state: ', this.state.usersRedux)
+        // console.log('hoidanit check all users: ', this.props.listUsers)
+        // console.log('hoidanit check state: ', this.state.usersRedux)
         let arrUsers = this.state.usersRedux;
         return (
                 <table id="TableManageUser">
