@@ -50,8 +50,8 @@ class TableManageUser extends Component {
     }
 
     render() {
-        // console.log('hoidanit check all users: ', this.props.listUsers)
-        // console.log('hoidanit check state: ', this.state.usersRedux)
+        // console.log('check all users: ', this.props.listUsers)
+        // console.log('check state: ', this.state.usersRedux)
         let arrUsers = this.state.usersRedux;
         return (
             <React.Fragment>
@@ -93,9 +93,7 @@ class TableManageUser extends Component {
                   
                     </tbody>
                 </table>
-
                 <MdEditor style={{ height: '500px' }} renderHTML={text => mdParser.render(text)} onChange={handleEditorChange} />
-
             </React.Fragment>
             );
         }
