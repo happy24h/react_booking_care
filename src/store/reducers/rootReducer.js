@@ -22,7 +22,8 @@ const userPersistConfig = {
 const appPersistConfig = {
     ...persistCommonConfig,
     key: 'app',
-    whitelist: ['language']
+    whitelist: ['language'],
+    
 }
 
 export default (history) => combineReducers({
