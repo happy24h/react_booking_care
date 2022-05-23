@@ -3,7 +3,6 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './TableManageUser.scss';
 import * as actions from "../../../store/actions";
-
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
 import 'react-markdown-editor-lite/lib/index.css';
@@ -43,8 +42,7 @@ class ManageDoctor extends Component {
             this.setState({
                 listDoctors: dataSelect
             })
-        }
-        
+        }     
     }
 
     buildDataInputSelect = (inputData) => {
@@ -60,11 +58,8 @@ class ManageDoctor extends Component {
                 result.push(object)
 
             })
-
-            }
-            return result;
-        
-        
+        }
+        return result;
     }
 
     // Finish!
@@ -168,13 +163,13 @@ class ManageDoctor extends Component {
 const mapStateToProps = state => {
     return {
         language: state.app.language,
-        allDoctors: state.admin.allDoctors
+        allDoctors: state.admin.allDoctors,
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        fetchAllDoctors: (id) => dispatch(actions.fetchAllDoctors()),
+        fetchAllDoctors: () => dispatch(actions.fetchAllDoctors()),
         saveDetailDoctor: (data) => dispatch(actions.saveDetailDoctor(data))
     };
 };

@@ -69,6 +69,14 @@ class Login extends Component {
         })
     }
 
+    // giúp bấm enter login sẽ vô trang home
+    handleKeyDown = (event) => {
+        console.log('hoi danit chanel check keydown: ', event)
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            this.handleLogin();
+        }
+    }
+
     render() {
         // jsx
 
@@ -85,6 +93,7 @@ class Login extends Component {
                            placeholder='Enter your username'
                            value={this.state.username}
                            onChange={(event) => this.handleOnChangeUsername(event)}
+                           onKeyDown={(event) => this.handleKeyDown(event)}
                            />
                        </div>
                        <div className='col-12 form-group login-input'>
@@ -96,6 +105,8 @@ class Login extends Component {
                                     placeholder='Enter your password'
                                     value={this.state.password}
                                     onChange={(event) => this.handleOnChangePassword(event)}
+                                    onKeyDown={(event) => this.handleKeyDown(event)}
+
                                 />
                                 <span onClick={() => {this.handleShowHidePassword()}}>
                                     <i className={this.state.isShowPassword ? 'far fa-eye': 'far fa-eye-slash'}></i>
