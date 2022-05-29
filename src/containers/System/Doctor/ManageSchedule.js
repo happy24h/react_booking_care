@@ -115,7 +115,7 @@ class ManageSchedule extends Component {
         if(rangeTime && rangeTime.length > 0) {
             let selectedTime = rangeTime.filter(item => item.isSelected === true)
             if(selectedTime && selectedTime.length > 0) {
-                selectedTime.map((schedule ,index)=> {
+                selectedTime.map((schedule ,index) => {
                     console.log('check schedule ', schedule ,'index', index, selectedTime)
                     let object = {};
                     object.doctorId = selectedDoctor.value; // value : label
@@ -133,15 +133,22 @@ class ManageSchedule extends Component {
             doctorId: selectedDoctor.value,
             formatedDate: formatedDate
         })
-        console.log('hoi dan it channel check res: saveBulkScheduleDoctor ', res)
 
-        console.log('hoi dan it channel check result: ', result)  
+        if(res && res.errCode === 0) {
+            toast.success("Save Infor succeed! ");
+            
+        }else {
+            toast.error("error saveBulkScheduleDoctor ");
+            console.log('error saveBulkScheduleDoctor >>> res: ', res)
+        }
+        
     }
 
     
     render() {
         let { rangeTime } = this.state;
         let { language } = this.props;
+        let yesterday = new Date(new Date().setDate(new Date().getDate()-1));
         console.log('hoi dan it check state: ', rangeTime )
         
         return (
@@ -167,7 +174,7 @@ class ManageSchedule extends Component {
                                 onChange={this.handleOnchangeDatePicker}
                                 className="form-control"
                                 value= {this.state.currentDate}
-                                minDate={new Date()}
+                                minDate={yesterday}
                                 
                             />
                         </div>
