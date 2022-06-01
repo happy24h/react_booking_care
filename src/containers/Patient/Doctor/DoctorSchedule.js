@@ -72,9 +72,7 @@ class DoctorSchedule extends Component {
             this.setState({
                 allAvalableTime: res.data ? res.data : []
 
-            })
-
-            
+            })   
         }
     }
 
@@ -89,7 +87,6 @@ class DoctorSchedule extends Component {
                     allAvalableTime: res.data ? res.data : []
                 })
             }
-
             console.log('check res schedule from react: ', res)
         }
     }
@@ -111,7 +108,6 @@ class DoctorSchedule extends Component {
                             >
                                 {item.label}
                             </option>
-
                           )
                       })}     
                   </select>
