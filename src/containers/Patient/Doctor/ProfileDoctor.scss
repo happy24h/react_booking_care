@@ -3,11 +3,12 @@
         display: flex;
         
         .content-left {
-            background: center center no-repeat;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
             height: 80px;
             width: 80px;
             border-radius: 50%;
-            
         }
         
         .content-right {
