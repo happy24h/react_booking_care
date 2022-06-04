@@ -161,10 +161,10 @@ class ManageSchedule extends Component {
                         <div className="col-6 form-group">
                             <label><FormattedMessage id="manage-schedule.choose-doctor"/></label>
                             <Select
-                            value={this.state.selectedDoctor}
-                            onChange={this.handleChangeSelect}
-                            options={this.state.listDoctors}                           
-                        />  
+                                value={this.state.selectedDoctor}
+                                onChange={this.handleChangeSelect}
+                                options={this.state.listDoctors}                           
+                            />  
                         </div>
                         <div className="col-6 form-group">
                             <label>
@@ -174,8 +174,7 @@ class ManageSchedule extends Component {
                                 onChange={this.handleOnchangeDatePicker}
                                 className="form-control"
                                 value= {this.state.currentDate}
-                                minDate={yesterday}
-                                
+                                minDate={yesterday}   
                             />
                         </div>
                         <div className="col-12 pick-hour-container">
