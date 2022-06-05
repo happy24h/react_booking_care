@@ -49,12 +49,10 @@ class ProfileDoctor extends Component {
         if(dataTime && !_.isEmpty(dataTime)) {
             let time = language === LANGUAGES.VI ? 
                 dataTime.timeTypeData.valueVi : dataTime.timeTypeData.valueEn;
-
             let date = language === LANGUAGES.VI ? 
-            moment.unix( +dataTime.date / 1000 ).format('dddd - DD/MM/YYYY') 
-            : 
-            moment.unix( +dataTime.date / 1000 ).locale('en').format('ddd - MM/DD/YYYY')
-
+                moment.unix( +dataTime.date / 1000 ).format('dddd - DD/MM/YYYY') 
+                : 
+                moment.unix( +dataTime.date / 1000 ).locale('en').format('ddd - MM/DD/YYYY')
             return (
                 <>
                     <div>{time} - {date} </div>
@@ -63,7 +61,6 @@ class ProfileDoctor extends Component {
             )
         }
         return <></>
-
     }
 
     render() { 
