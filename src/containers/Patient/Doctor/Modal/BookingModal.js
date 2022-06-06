@@ -112,14 +112,11 @@ class BookingModal extends Component {
             `${dataTime.doctorData.lastName} ${dataTime.doctorData.firstName}`
             : 
             `${dataTime.doctorData.firstName} ${dataTime.doctorData.lastName}`
-
                 return name
         }
         return ``
-
     }
-
-
+    
     handleConfirmBooking = async() => {
         // validate input
         // !data.email || !data.doctorId || !data.timeType || !data.date
