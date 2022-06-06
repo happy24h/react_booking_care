@@ -327,7 +327,6 @@ class ManageDoctor extends Component {
             </div>
             );
         }
-
 }
 
 const mapStateToProps = state => {
