@@ -63,8 +63,12 @@ class OutStandingDoctor extends Component {
                                 <div className="section-customize" key={index} onClick={() => this.handleViewDetailDoctor(item)}>
                                 <div className="customize-border">
                                     <div className="outer-bg">
-                                        <div className="bg-image section-outstanding-doctor"
-                                        style={{backgroundImage: `url(${imageBase64})`}}></div>
+                                        <div 
+                                            className="bg-image section-outstanding-doctor"
+                                            style={{backgroundImage: `url(${imageBase64})`}}
+                                        >
+
+                                        </div>
                                     </div>
                                     <div className="position text-center">
                                         <div>{language === LANGUAGES.VI ? nameVi : nameEn}</div>
