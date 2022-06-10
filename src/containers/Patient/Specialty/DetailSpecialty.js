@@ -53,7 +53,6 @@ class DetailSpecialty extends Component {
                         valueEn: "ALL",
                         valueVi: "Toàn quốc",
                     })
-
                 }
 
                 this.setState({
@@ -69,8 +68,8 @@ class DetailSpecialty extends Component {
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if(this.props.language !== prevProps.language) {
-            
-        }         
+        
+        }      
     }
 
     handleOnChangeSelect = async (event) => {
