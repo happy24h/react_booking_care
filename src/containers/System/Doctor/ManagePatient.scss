@@ -22,6 +22,26 @@
                 text-align: left;
             }
 
+            button {
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+
+            .mp-btn-confirm {
+                margin-right: 10px;
+                height: 30px;
+                border-radius: 3px;
+                background: orange;
+            }
+
+            .mp-btn-remedy {
+                margin-right: 10px;
+                height: 30px;
+                border-radius: 3px;
+                background: rgb(159, 159, 243);
+            }
+
         }
     }
 }
