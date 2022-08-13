@@ -66,8 +66,6 @@ class UserManage extends Component {
         }catch(e) {
             console.log(e)
         }
-       
-      
     }
 
     handleDeleteUser = async (user) => {

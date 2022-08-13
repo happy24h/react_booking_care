@@ -147,8 +147,6 @@ class DoctorExtraInfor extends Component {
                             </div>
                         </>
                     }
-
-             
                     
                </div>
            </div>
